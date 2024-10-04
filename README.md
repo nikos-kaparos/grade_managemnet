@@ -1,52 +1,51 @@
 # Grading System Project
 
-## Περιγραφή
+## Description
 
-Αυτό το project είναι ένα σύστημα διαχείρισης βαθμολογιών για εκπαιδευτικά ιδρύματα. Οι καθηγητές μπορούν να καταχωρούν βαθμολογίες για τους φοιτητές, η γραμματεία μπορεί να επιβεβαιώνει αυτές τις βαθμολογίες και οι φοιτητές μπορούν να βλέπουν την αναλυτική τους βαθμολογία.
+This project is a grading management system for educational institutions. Teachers can enter grades for students, the secretariat can confirm these grades, and students can view their detailed grades.
 
-## Τεχνολογίες
+## Technologies
 
-- **Django**: Web framework για την ανάπτυξη της εφαρμογής.
-- **PostgreSQL**: Βάση δεδομένων για την αποθήκευση δεδομένων.
-- **Docker**: Για την απομόνωση του περιβάλλοντος ανάπτυξης και παραγωγής.
-- **Docker Compose**: Για την ευκολότερη διαχείριση των υπηρεσιών Docker.
+- **Django**: Web framework used for developing the application.
+- **PostgreSQL**: Database used for storing data.
+- **Docker**: Used for isolating the development and production environments.
+- **Docker Compose**: Used for easier management of Docker services.
 
-## Απαιτήσεις
+## Requirements
 
-Πριν ξεκινήσεις, βεβαιώσου ότι έχεις εγκαταστήσει:
+Before starting, ensure that you have the following installed:
 
 - Docker
 - Docker Compose
 - Python 3.x
 - pip
 
-## Εγκατάσταση
+## Installation
 
 1. **Clone το repository:**
    ```bash
    git clone https://github.com/nikos-kaparos/grade_managemnet/tree/main
    cd grading_system
-2. **Δημιουργία του περιβάλλοντος Docker:**
+2. **Set up the Docker environment:**
     ```bash
    docker-compose up --build
-3. **Eκτέλεση migrations για τη βάση δεδομένων:**
+3. **Run the database migrations:**
    ```bash
    docker-compose run web python manage.py makemigrations
    docker-compose run web python manage.py migrate
-4. Δημιουργία superuser (προαιρετικό):
+4. **Create a superuser (optional):**
    ```bash
    docker-compose run web python manage.py createsuperuser
-## Πρόσβαση στην εφαρμογή:
-Άνοιξε τον browser σου και πήγαινε στο http://localhost:8000
-## Χρήση
-Σύνδεση:
-Για να συνδεθείς, θα πρέπει να έχεις έναν λογαριασμό. Οι φοιτητές πρέπει να έχουν username που αρχίζει με "it".
-Οι ομάδες χρηστών περιλαμβάνουν:
-Teacher
-Secretariat
-Students
-Λειτουργίες:
-
-Οι καθηγητές μπορούν να προσθέσουν βαθμολογίες.
-Η γραμματεία μπορεί να επιβεβαιώσει τις βαθμολογίες.
-Οι φοιτητές μπορούν να δουν τις αναλυτικές τους βαθμολογίες.
+## Access the application:
+Open your browser and go to http://localhost:8000
+## Usage
+   Login:
+      To log in, you must have an account. Students' usernames must begin with "it".
+      The user groups include:
+         Teacher
+         Secretariat
+         Students
+   Features:
+      Teachers can add grades.
+      The secretariat can confirm grades.
+      Students can view their detailed grades.
