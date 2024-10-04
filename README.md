@@ -24,7 +24,7 @@
 
 1. **Clone το repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nikos-kaparos/grade_managemnet/tree/main
    cd grading_system
 2. **Δημιουργία του περιβάλλοντος Docker:**
     ```bash
