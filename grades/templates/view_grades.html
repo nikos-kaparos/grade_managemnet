@@ -1,0 +1,6 @@
+<h2>Αναλυτική Βαθμολογία</h2>
+<ul>
+    {% for grade in grades %}
+        <li>{{ grade.subject }}: {{ grade.score }}</li>
+    {% endfor %}
+</ul>

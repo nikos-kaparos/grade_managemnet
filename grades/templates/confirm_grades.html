@@ -1,0 +1,12 @@
+<h2>Επιβεβαίωση Βαθμολογιών</h2>
+<ul>
+    {% for grade in grades %}
+        <li>
+            {{ grade.student.username }} - {{ grade.subject }}: {{ grade.score }}
+            <form method="post" action="{% url 'confirm_grade' grade.id %}">
+                {% csrf_token %}
+                <button type="submit">Επιβεβαίωση</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
